@@ -1,0 +1,209 @@
+type: custom:stack-in-card
+title: 💡Lys
+#icon: mdi:lightbulb-group-outline 
+cards:
+  - type: entities
+    entities:
+      - input_select.room_light
+    
+  - type: custom:state-switch
+    entity: input_select.room_light
+    states:
+
+      # Første sal
+      Første sal:
+        type: custom:stack-in-card
+        cards:
+          - type: custom:stack-in-card
+            mode: horizontal
+            cards:
+              - type: entity-button
+                entity: light.trappe_hue
+                name: Trappe
+              
+              - type: entity-button
+                entity: light.sovevaerelse_hue
+                name: Soveværelse
+                
+              - type: entity-button
+                entity: light.kontor_hue
+                name: Kontor
+                
+              - type: entity-button
+                entity: light.victor_hue_hue
+                name: Victor
+                
+          - type: custom:stack-in-card
+            mode: horizontal
+            cards:
+              - type: custom:slider-entity-row
+                entity: light.trappe_hue
+                full_row: true
+                hide_state: true
+                
+              - type: custom:slider-entity-row
+                entity: light.sovevaerelse_hue
+                full_row: true
+                hide_state: true
+                
+              - type: custom:slider-entity-row
+                entity: light.kontor_hue
+                full_row: true
+                hide_state: true
+                
+              - type: custom:slider-entity-row
+                entity: light.victor_hue_hue
+                full_row: true
+                hide_state: true
+                
+      # Stue etage
+      Stue:
+        type: custom:stack-in-card
+        cards:
+          - type: custom:stack-in-card
+            mode: horizontal
+            cards:
+              - type: entity-button
+                entity: light.entre_hue
+                name: Entre
+              
+              - type: entity-button
+                entity: light.indhak_hue
+                name: Indhak
+                
+              - type: entity-button
+                entity: light.kokkenhojre_traadfri
+                name: Køkken højre
+                
+              - type: entity-button
+                entity: light.kokkenvenstre_traadfri
+                name: Køkken venstre
+                
+          - type: custom:stack-in-card
+            mode: horizontal
+            cards:
+              - type: custom:slider-entity-row
+                entity: light.entre_hue
+                full_row: true
+                hide_state: true
+                
+              - type: custom:slider-entity-row
+                entity: light.indhak_hue
+                full_row: true
+                hide_state: true
+                
+              - type: custom:slider-entity-row
+                entity: light.kokkenhojre_traadfri
+                full_row: true
+                hide_state: true
+                
+              - type: custom:slider-entity-row
+                entity: light.kokkenvenstre_traadfri
+                full_row: true
+                hide_state: true
+
+      # Kælder etage
+      Kælder:
+        type: custom:stack-in-card
+        cards:
+          - type: custom:stack-in-card
+            mode: horizontal
+            cards:
+              - type: entity-button
+                entity: light.kaelder_trappe_hue
+                name: Kælder trappe
+              
+              - type: entity-button
+                entity: light.kaelder_entre_hue
+                name: Kælder entre
+                
+              - type: entity-button
+                entity: light.vaskerum_hue
+                name: Vaskerum
+                
+              - type: entity-button
+                entity: light.vinkaelder_hue
+                name: Vinkælder
+          - type: custom:stack-in-card
+            mode: horizontal
+            cards:
+              - type: custom:slider-entity-row
+                entity: light.kaelder_trappe_hue
+                full_row: true
+                hide_state: true
+                
+              - type: custom:slider-entity-row
+                entity: light.kaelder_entre_hue
+                full_row: true
+                hide_state: true
+                
+              - type: custom:slider-entity-row
+                entity: light.vaskerum_hue
+                full_row: true
+                hide_state: true
+                
+              - type: custom:slider-entity-row
+                entity: light.vinkaelder_hue
+                full_row: true
+                hide_state: true
+          - type: custom:stack-in-card
+            mode: horizontal
+            cards:
+              - type: entity-button
+                entity: light.fyrrum_hue
+                name: Fyrrum
+
+              - type: entity-button
+                entity: light.kaelderrum_1_hue
+                name: Kælderrum 1
+
+              - type: entity-button
+                entity: light.kaelderrum_2_hue
+                name: Kælderrum 2  
+
+              - type: entity-button
+                entity: light.kaelderrum_3_hue
+                name: Kælderrum 3
+
+
+          - type: custom:stack-in-card
+            mode: horizontal
+            cards:
+              - type: custom:slider-entity-row
+                entity: light.fyrrum_hue
+                full_row: true
+                hide_state: true
+
+              - type: custom:slider-entity-row
+                entity: light.kaelderrum_1_hue
+                full_row: true
+                hide_state: true
+
+              - type: custom:slider-entity-row
+                entity: light.kaelderrum_2_hue
+                full_row: true
+                hide_state: true
+
+              - type: custom:slider-entity-row
+                entity: light.kaelderrum_3_hue
+                full_row: true
+                hide_state: true
+
+      # Udendørs
+      Udendørs:
+        type: custom:stack-in-card
+        cards:
+          - type: custom:stack-in-card
+            mode: horizontal
+            cards:
+              - type: entity-button
+                entity: light.udendors_lampe_hue
+                name: Udendørs lampe
+                
+          - type: custom:stack-in-card
+            mode: horizontal
+            cards:
+              - type: custom:slider-entity-row
+                entity: light.udendors_lampe_hue
+                full_row: true
+                hide_state: true

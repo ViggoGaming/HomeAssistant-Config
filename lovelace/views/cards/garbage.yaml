@@ -1,0 +1,31 @@
+type: entities
+title: 🚚 Affald
+entities:
+  - type: attribute
+    entity: sensor.renoweb_glas_metal
+    attribute: formatted_state_dk
+    name: Glas/Metal
+    icon: mdi:glass-wine
+    
+  - type: attribute
+    entity: sensor.renoweb_plast_papir
+    attribute: formatted_state_dk
+    name: Plast/Papir
+    
+  - type: attribute
+    entity: sensor.renoweb_pap
+    attribute: formatted_state_dk
+    name: Pap
+    icon: mdi:file
+    
+  - type: attribute
+    entity: sensor.renoweb_haveaffald
+    attribute: formatted_state_dk
+    name: Haveaffald
+    icon: mdi:tree
+    
+  - type: attribute
+    entity: sensor.renoweb_mad_rest
+    attribute: formatted_state_dk
+    name: Mad/Rest
+    icon: mdi:food

@@ -1,0 +1,43 @@
+default_config:
+
+input_select:
+    room_light:
+        name : "Vælg etage"
+        icon: mdi:home-lightbulb
+        options:
+        - "Første sal"
+        - "Stue"
+        - "Kælder"
+        - "Udendørs"
+
+# Text to speech
+tts:
+  - platform: google_translate
+    language: 'da'
+
+google:
+  client_id: !secret google_client_id 
+  client_secret: !secret google_client_secret
+
+
+sun:
+
+lovelace:
+  mode: yaml
+  resources: !include_dir_merge_list lovelace/resources/
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+homeassistant:
+  customize: !include_dir_merge_named lovelace/customizations
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+sensor: !include_dir_merge_list lovelace/sensors
+
+discovery:
+
+browser_mod:

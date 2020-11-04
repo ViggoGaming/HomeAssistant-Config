@@ -1,0 +1,44 @@
+type: entities
+title: ☀️ Indeklima
+entities:
+- entity: sensor.netatmo_svendebjergvejr_temperature
+  name: Temperatur (Stue)
+  
+     
+- entity: sensor.temperature
+  name: Temperatur (Arduino)
+
+# - entity: sensor.netatmo_svendebjergvejr_co2
+#   name: CO2 i Stuen
+
+- entity: sensor.netatmo_svendebjergvejr_victors_vaerelse_temperature
+  name: Temperatur (Victor)
+
+# - entity: sensor.netatmo_svendebjergvejr_victors_vaerelse_co2
+#   name: CO2 på Victor's værelse
+
+- type: custom:mini-graph-card
+  name: CO2
+  icon: none
+  hours_to_show: 24
+  points_per_hour: 1
+  font_size: 75
+  animate: true
+  hour24: true
+
+  color_thresholds:
+    - value: 0
+      color: "#03a82f"
+    - value: 1200
+      color: "#dbac02"
+    - value: 2000
+      color: "#db3c02" 
+  entities:
+    - entity: sensor.netatmo_svendebjergvejr_co2
+      name: Stue
+
+    - entity: sensor.netatmo_svendebjergvejr_victors_vaerelse_co2
+      name: Victor
+      tap_action:
+        action: more-info
+        entity: sensor.netatmo_svendebjergvejr_temperature

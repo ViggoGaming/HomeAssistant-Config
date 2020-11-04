@@ -1,0 +1,19 @@
+# Folders
+.storage
+.cloud
+.google.token
+www/
+tts/
+node-red/
+deps/
+custom_components/
+esphome/
+
+# Files
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
+.HA_VERSION
+google_calendars.yaml
+home-assistant_v2.db
+home-assistant.log

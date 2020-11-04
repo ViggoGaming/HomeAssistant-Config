@@ -1,0 +1,180 @@
+floorplan_light_colour:
+  element:
+    entity: '[[entity]]'
+    hold_action:
+      action: call-service
+      service: browser_mod.popup
+      service_data:
+        card:
+          type: vertical-stack
+          cards:
+            - type: entities
+              entities:
+                - entity: '[[entity]]'
+                  secondary_info: last-changed
+            - type: horizontal-stack
+              cards:
+                - type: vertical-stack
+                  cards:
+                    - type: custom:light-entity-card
+                      entity: '[[entity]]'
+                      color_temp: true
+                      color_wheel: true
+                      full_width_sliders: true
+                      smooth_color_wheel: true
+                      persist_features: true
+                      header: false
+                      effects_list: false
+                      brightness: false
+                      white_value: false
+                      color_picker: false
+                      style: |
+                          ha-card {
+                            box-shadow: none !important;
+                          }
+                    - type: custom:light-entity-card
+                      entity: '[[entity]]'
+                      color_wheel: true
+                      color_picker: true
+                      effects_list: true
+                      full_width_sliders: true
+                      smooth_color_wheel: true
+                      persist_features: true
+                      header: false
+                      brightness: false
+                      color_temp: false
+                      white_value: false
+                      style: |
+                          ha-card {
+                            box-shadow: none !important;
+                          }
+                - type: 'custom:light-slider-card'
+                  entity: '[[entity]]'
+                  color_temp: true
+                  header: false
+                  persist_features: true
+
+        deviceID:
+          - this
+        style:
+          '--ha-card-border-radius': 0vw 0vw 0.8vw 0.8vw
+          border-radius: 0.8vw
+          opacity: 0.9
+        title: '[[name]]'
+    icon: 'checkbox-blank-circle'
+    style:
+      '--iron-icon-height': 3vw
+      '--iron-icon-width': 3vw
+      '--paper-item-icon-active-color': '#CCCCCC'
+      '--paper-item-icon-color': '#CCCCCC'
+      align-items: center
+      background-color: '#CCCCCC'
+      border-radius: 100%
+      box-shadow: '0px 0px 28px 0px rgba(0,0,0,0.39)'
+      display: flex
+      height: 3vw
+      justify-content: center
+      left: '[[left]]'
+      margin-left: '-1.5vw'
+      margin-top: '-1.5vw'
+      top: '[[top]]'
+      width: 3vw
+    tap_action:
+      action: toggle
+    type: state-icon
+
+floorplan_media_player:
+  element:
+    entity: '[[entity]]'
+    hold_action:
+      action: call-service
+      service: browser_mod.popup
+      service_data:
+        card:
+          type: vertical-stack
+          cards:
+            - type: custom:mini-media-player
+              entity: '[[entity]]'
+              source: icon
+              artwork: none
+              hide:
+                power: true
+                icon: true
+              speaker_group:
+                platform: sonos
+                show_group_count: true
+                entities:
+                  - entity_id: '[[group1]]'
+                    name: '[[group1Name]]'
+              shortcuts:         ### You can edit these to any playlist of source you wish
+                columns: 4 # Max buttons per row
+                buttons:
+                  - icon: mdi:pine-tree           
+                    type: playlist
+                    id: spotify:user:spotify:playlist:37i9dQZF1DX0Yxoavh5qJV
+                  - icon: mdi:music-clef-treble
+                    type: source
+                    id: Classic FM
+        deviceID:
+          - this
+        style:
+          '--ha-card-border-radius': 0vw 0vw 0.8vw 0.8vw
+          border-radius: 0.8vw
+          opacity: 0.9
+        title: '[[name]]'
+    icon: mdi:speaker
+    style:
+      '--iron-icon-height': 3vw
+      '--iron-icon-width': 3vw
+      '--paper-item-icon-active-color': '#2b2b2b'
+      '--paper-item-icon-color': '#2b2b2b'
+      align-items: center
+      background-color: '#CCCCCC'
+      border-radius: 100%
+      box-shadow: '0px 0px 28px 0px rgba(0,0,0,0.39)'
+      display: flex
+      height: 2.5vw
+      justify-content: center
+      left: '[[left]]'
+      margin-left: '-1.5vw'
+      margin-top: '-1.5vw'
+      top: '[[top]]'
+      width: 2.5vw
+    tap_action:
+      action: call-service
+      service: media_player.media_play_pause
+      service_data:
+        entity_id: '[[entity]]'
+    type: state-icon
+
+floorplan_heating:
+  element:
+    type: image
+    action: none
+    entity: '[[sensor]]'
+    hold_action:
+      action: none
+    image: /local/images/FloorplanDemo/RadOff.png 
+    state_image:
+      "heating": /local/images/FloorplanDemo/RadOn.png
+    style:
+      top: '[[top]]'
+      left: '[[left]]'
+      width: 5vw
+      height: 3vw
+    tap_action:
+      action: call-service
+      service: browser_mod.popup
+      service_data:
+        card:
+          type: vertical-stack
+          cards:
+            - type: thermostat
+              entity: '[[climate]]'
+        deviceID:
+          - this
+        style:
+          '--ha-card-border-radius': 0vw 0vw 0.8vw 0.8vw
+          border-radius: 0.8vw
+          opacity: 0.9
+        title: '[[name]]'

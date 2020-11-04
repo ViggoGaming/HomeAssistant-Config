@@ -1,0 +1,10 @@
+decluttering_templates:
+  !include lovelace/views/templates/floorplan_light_color.yaml
+
+title: Hjem
+views: 
+  - !include lovelace/views/home.yaml
+  - !include lovelace/views/lights.yaml
+  - !include lovelace/views/floorplan.yaml
+  - !include lovelace/views/battery.yaml
+

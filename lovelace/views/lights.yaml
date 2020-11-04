@@ -1,0 +1,132 @@
+title: Lys
+icon: mdi:lightbulb-group
+panel: true
+path: light
+
+
+cards:
+
+  - type: custom:layout-card
+    layout: horizontal
+    cards:
+      - type: entities
+        title: Første sal
+        icon: mdi:home-floor-1
+        show_header_toggle: true
+        entities:
+          - entity: light.trappe_hue
+            hide_when_off: true
+            name: Trappe
+            toggle: true
+            type: 'custom:slider-entity-row'
+
+          - entity: light.sovevaerelse_hue
+            hide_when_off: true
+            name: Soveværelse
+            toggle: true
+            type: 'custom:slider-entity-row'
+
+          - entity: light.kontor_hue
+            hide_when_off: true
+            name: Kontor
+            toggle: true
+            type: 'custom:slider-entity-row'
+
+          - entity: light.victor_hue_hue
+            hide_when_off: true
+            name: Victor
+            toggle: true
+            type: 'custom:slider-entity-row'
+
+      - type: entities
+        title: Stue
+        icon: mdi:home-floor-0
+        show_header_toggle: true
+        entities:
+          - entity: light.entre_hue
+            hide_when_off: true
+            name: Entre
+            toggle: true
+            type: 'custom:slider-entity-row'
+
+          - entity: light.indhak_hue
+            hide_when_off: true
+            name: Indhak
+            toggle: true
+            type: 'custom:slider-entity-row'
+
+          - entity: light.kokkenhojre_traadfri
+            hide_when_off: true
+            name: Køkken højre
+            toggle: true
+            type: 'custom:slider-entity-row'
+
+          - entity:  light.kokkenvenstre_traadfri
+            hide_when_off: true
+            name: Køkken venstre
+            toggle: true
+            type: 'custom:slider-entity-row'
+
+      - type: entities
+        title: Kælder
+        icon: mdi:home-floor-negative-1
+        show_header_toggle: true
+        entities:
+          - entity: light.kaelder_trappe_hue
+            hide_when_off: true
+            name: Kælder trappe
+            toggle: true
+            type: 'custom:slider-entity-row'
+      
+          - entity: light.kaelder_entre_hue
+            hide_when_off: true
+            name: Kælder entre
+            toggle: true
+            type: 'custom:slider-entity-row'
+
+          - entity: light.vaskerum_hue
+            hide_when_off: true
+            name: Vaskerum
+            toggle: true
+            type: 'custom:slider-entity-row'
+
+          - entity: light.vinkaelder_hue
+            hide_when_off: true
+            name: Vinkælder
+            toggle: true
+            type: 'custom:slider-entity-row'
+
+          - entity: light.fyrrum_hue
+            hide_when_off: true
+            name: Fyrrum
+            toggle: true
+            type: 'custom:slider-entity-row'
+
+          - entity: light.kaelderrum_1_hue
+            hide_when_off: true
+            name: Kælderrum 1
+            toggle: true
+            type: 'custom:slider-entity-row'
+
+          - entity: light.kaelderrum_2_hue
+            hide_when_off: true
+            name: Kælderrum 2
+            toggle: true
+            type: 'custom:slider-entity-row'
+
+          - entity: light.kaelderrum_3_hue
+            hide_when_off: true
+            name: Kælderrum 3
+            toggle: true
+            type: 'custom:slider-entity-row'
+            
+      - type: entities
+        title: Udendørs
+        icon: mdi:outdoor-lamp
+        show_header_toggle: true
+        entities:
+          - entity: light.udendors_lampe_hue
+            hide_when_off: true
+            name: Udendørs lampe
+            toggle: true
+            type: 'custom:slider-entity-row'

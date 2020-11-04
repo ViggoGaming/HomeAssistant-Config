@@ -1,0 +1,156 @@
+title: Plantegning
+icon: mdi:floor-plan
+path: floorplan
+panel: true
+
+cards:
+  - type: "custom:config-template-card"
+    entities:
+      - light.victor_hue_hue
+      - light.trappe_hue
+      - light.sovevaerelse_hue
+      - light.kontor_hue
+    card:
+      type: picture-elements
+      image: /local/images/floorplan/firstFloor_Night.png
+      style: |
+        ha-card:first-child {
+          background: rgba(42, 46, 48, 1)
+        }
+      elements:
+        - type: image
+          action: none
+          entity: sun.sun
+          state_image:
+            above_horizon: /local/images/floorplan/firstFloor_Day.png
+            below_horizon: /local/images/floorplan/transparent.png
+            #below_horizon: /local/images/floorplan/firstFloor_Day.png
+          style:
+            height: 100%
+            left: 50%
+            mix-blend-mode: lighten
+            opacity: '${ states[''sensor.sunlight_opacity''].state }'
+            top: 50%
+            width: 100%
+          top_action:
+            action: none
+          hold_action:
+            action: none
+
+        - type: image
+          action: none
+          entity: light.victor_hue_hue
+          hold_action:
+            action: none
+          image: /local/images/floorplan/firstFloor_Victor2.png
+          style:
+            filter: >-
+              ${ "hue-rotate(" + (states['light.victor_hue_hue'].attributes.hs_color
+              ? states['light.victor_hue_hue'].attributes.hs_color[0] : 0) + "deg)"}
+            left: 50%
+            mix-blend-mode: lighten
+            opacity: "${states['light.victor_hue_hue'].state === 'on' ? (states['light.victor_hue_hue'].attributes.brightness / 255) : '0'}"
+            top: 50%
+            width: 100%
+            height: 100%
+          tap_action:
+            action: none
+            
+        - type: image
+          action: none
+          entity: light.trappe_hue
+          hold_action:
+            action: none
+          image: /local/images/floorplan/firstFloor_Trappe.png
+          style:
+            filter: >-
+              ${ "hue-rotate(" + (states['light.trappe_hue'].attributes.hs_color
+              ? states['light.trappe_hue'].attributes.hs_color[0] : 0) + "deg)"}
+            left: 50%
+            mix-blend-mode: lighten
+            opacity: "${states['light.trappe_hue'].state === 'on' ? (states['light.trappe_hue'].attributes.brightness / 255) : '0'}"
+            top: 50%
+            width: 100%
+            height: 100%
+          tap_action:
+            action: none
+            
+        - type: image
+          action: none
+          entity: light.kontor_hue
+          hold_action:
+            action: none
+          image: /local/images/floorplan/firstFloor_Kontor.png
+          style:
+            filter: >-
+              ${ "hue-rotate(" + (states['light.kontor_hue'].attributes.hs_color
+              ? states['light.kontor_hue'].attributes.hs_color[0] : 0) + "deg)"}
+            left: 50%
+            mix-blend-mode: lighten
+            opacity: "${states['light.kontor_hue'].state === 'on' ? (states['light.kontor_hue'].attributes.brightness / 255) : '0'}"
+            top: 50%
+            width: 100%
+            height: 100%
+          tap_action:
+            action: none
+            
+        - type: image
+          action: none
+          entity: light.sovevaerelse_hue
+          hold_action:
+            action: none
+          image: /local/images/floorplan/firstFloor_Soveværelse.png
+          style:
+            filter: >-
+              ${ "hue-rotate(" + (states['light.sovevaerelse_hue'].attributes.hs_color
+              ? states['light.sovevaerelse_hue'].attributes.hs_color[0] : 0) + "deg)"}
+            left: 50%
+            mix-blend-mode: lighten
+            opacity: "${states['light.sovevaerelse_hue'].state === 'on' ? (states['light.sovevaerelse_hue'].attributes.brightness / 255) : '0'}"
+            top: 50%
+            width: 100%
+            height: 100%
+          tap_action:
+            action: none
+
+        ####### ADD THE BUTTONS! ###
+
+        # Victor Lys
+        - type: custom:decluttering-card
+          template: floorplan_light_colour
+          variables:
+            - entity: light.victor_hue_hue
+            - left: 70%
+            - top: 35%
+            - type: state-icon
+            - name: Victor Lys
+            
+        # Trappe Lys
+        - type: custom:decluttering-card
+          template: floorplan_light_colour
+          variables:
+            - entity: light.trappe_hue
+            - left: 50%
+            - top: 60%
+            - type: state-icon
+            - name: Trappe Lys
+        
+        # Kontor Lys
+        - type: custom:decluttering-card
+          template: floorplan_light_colour
+          variables:
+            - entity: light.kontor_hue
+            - left: 40%
+            - top: 37%
+            - type: state-icon
+            - name: Kontor Lys
+        
+        # Soveværelse Lys
+        - type: custom:decluttering-card
+          template: floorplan_light_colour
+          variables:
+            - entity: light.sovevaerelse_hue
+            - left: 30%
+            - top: 70%
+            - type: state-icon
+            - name: Soveværelse Lys

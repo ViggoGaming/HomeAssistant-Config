@@ -1,0 +1,81 @@
+title: Batteri
+icon: mdi:battery
+panel: true
+path: battery
+
+cards:
+  - type: entities
+    entities:
+      - type: custom:battery-entity-row
+        entity: sensor.famillie_ipad_battery_level
+        name: Famillie iPad
+        critical: 15
+        warning: 65
+        charging: true
+
+      - type: custom:battery-entity-row
+        entity: sensor.in2023_battery_level
+        name: OnePlus 8 Pro
+        critical: 15
+        warning: 65
+        charging: true
+
+      - type: custom:battery-entity-row
+        entity: sensor.kaelder_switch_battery_level_hue
+        name: Kælder kontakt
+        critical: 15
+        warning: 65
+
+      - type: custom:battery-entity-row
+        entity: sensor.victor_vaerelse_battery_level_hue
+        name: Victors værelse kontakt
+        critical: 15
+        warning: 65
+
+      - type: custom:battery-entity-row
+        entity: sensor.netatmo_svendebjergvejr_vindmaler_battery_percent
+        name: Netatmo vindmåler
+        critical: 15
+        warning: 65
+
+      - type: custom:battery-entity-row
+        entity: sensor.netatmo_svendebjergvejr_victors_vaerelse_battery_percent
+        name: Netatmo Victors værelse
+        critical: 15
+        warning: 65
+
+      - type: custom:battery-entity-row
+        entity: sensor.netatmo_svendebjergvejr_udendors_battery_percent
+        name: Netatmo udendørs
+        critical: 15
+        warning: 65
+
+      - type: custom:battery-entity-row
+        entity: sensor.netatmo_svendebjergvejr_sovevaerelse_battery_percent
+        name: Netatmo soveværelse
+        critical: 15
+        warning: 65
+
+      - type: custom:battery-entity-row
+        entity: sensor.netatmo_svendebjergvejr_regnmaler_battery_percent
+        name: Netatmo regnmåler
+        critical: 15
+        warning: 65
+      
+      - type: custom:battery-entity-row
+        entity: climate.netatmo_stue_hojre
+        name: Termostat stue højre
+        critical: 15
+        warning: 65
+
+      - type: custom:battery-entity-row
+        entity: climate.netatmo_stue_venstre
+        name: Termostat stue venstre
+        critical: 15
+        warning: 65
+
+      - type: custom:battery-entity-row
+        entity: sensor.netatmo_svendebjergvejr_kaelder_battery_percent
+        name: Netatmo kælder
+        critical: 15
+        warning: 65

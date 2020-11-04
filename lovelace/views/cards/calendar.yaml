@@ -1,0 +1,6 @@
+#type: markdown
+#content: Kalender
+
+type: 'custom:atomic-calendar-revive'
+entities:
+  - entity: calendar.victor

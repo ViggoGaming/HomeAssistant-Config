@@ -1,0 +1,10 @@
+type: custom:swipe-card
+cards:
+  - type: custom:mini-media-player
+    entity: media_player.stue_chromecast
+    
+  - type: custom:mini-media-player
+    entity: media_player.dagligstue
+  
+  - type: custom:mini-media-player
+    entity: media_player.victor_chromecast
