@@ -1,2 +1,9 @@
-type: markdown
-content: Post
+#type: markdown
+#content: Post
+
+type: button
+name: Test
+show_state: false
+tap_action:
+  action: navigate
+  service: person.victor

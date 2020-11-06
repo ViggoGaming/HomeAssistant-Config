@@ -1,39 +1,35 @@
 type: custom:layout-card
 layout: horizontal
 min_columns: 3 
-#min_width: 30%
-#max_width: 0
 cards:
     - type: picture-glance
-     # title: Victor
-      image: /local/images/persons/victor_color_fixed4.jpg
       entities:
+        - person.victor
         - sensor.in2023_battery_level
-        #name: Battery
         - sensor.in2023_wifi_connection
-        - sensor.in2023_geocoded_location
-        #name: WiFi
-        #tap_action:
-          #action: person.victor
-          #service: person.victor
+      state_image:
+        "home": /local/images/persons/victor_color.jpg
+        "not_home": /local/images/persons/victor_black_and_white.jpg
+        "Sukkertoppen": /local/images/persons/victor_sukkertoppen.jpg
+      entity: person.victor
+
     - type: picture-glance
-     # title: Victor
-      image: /local/images/persons/victor_color_fixed4.jpg
       entities:
-       #- person.victor
-        - sensor.in2023_battery_level
-         #name: Battery
-        - sensor.in2023_wifi_connection
-        - sensor.in2023_geocoded_location
-          #name: WiFi
+        - person.jacob_buch_hansen
+        - sensor.jacob_buch_hansen_battery_level
+        - sensor.jacob_buch_hansen_connection_type
+      state_image:
+        "home": /local/images/persons/jacob_color.jpg
+        "not_home": /local/images/persons/jacob_black_and_white.jpg
+      entity: person.jacob_buch_hansen
         
     - type: picture-glance
-    #  title: Victor
-      image: /local/images/persons/victor_color_fixed4.jpg
+      image: /local/images/persons/pernille_color.jpg
       entities:
-          #- person.victor
-        - sensor.in2023_battery_level
-          #name: Battery
-        - sensor.in2023_wifi_connection
-        - sensor.in2023_geocoded_location
-          #name: WiFi  
+        - person.pernille_therkildsen
+        - sensor.pernille_therkildsens_iphone_battery_level
+        - sensor.pernille_therkildsens_iphone_connection_type
+      state_image:
+        "home": /local/images/persons/pernille_color.jpg
+        "not_home": /local/images/persons/pernille_black_and_white.jpg
+      entity: person.pernille_therkildsen
