@@ -57,5 +57,9 @@
   
 - url: /local/community/lovelace-card-mod/card-mod.js
   type: module
+  
+- url: /local/community/lovelace-gap-card/gap-card.js
+  type: module
+                
                 
                 

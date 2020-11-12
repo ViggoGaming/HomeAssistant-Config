@@ -1,6 +1,5 @@
 type: custom:stack-in-card
 title: 💡Lys
-#icon: mdi:lightbulb-group-outline 
 cards:
   - type: entities
     entities:
@@ -28,18 +27,22 @@ cards:
               - type: entity-button
                 entity: light.trappe_hue
                 name: Trappe
+                icon: mdi:ceiling-light
               
               - type: entity-button
                 entity: light.sovevaerelse_hue
                 name: Soveværelse
+                icon: mdi:ceiling-light
                 
               - type: entity-button
                 entity: light.kontor_hue
                 name: Kontor
+                icon: mdi:ceiling-light
                 
               - type: entity-button
                 entity: light.victor_hue_hue
                 name: Victor
+                icon: mdi:ceiling-light
                 
           - type: custom:stack-in-card
             mode: horizontal
@@ -84,12 +87,12 @@ cards:
                 entity: light.nat_lampe_victor_hue
                 name: Victor nat lys
                 
-              - type: entity-button
+              - type: custom:gap-card
               
-              - type: entity-button
+              - type: custom:gap-card
               
-              - type: entity-button
-              
+              - type: custom:gap-card
+
           - type: custom:stack-in-card
             mode: horizontal
             style: |
@@ -101,7 +104,12 @@ cards:
                 entity: light.nat_lampe_victor_hue
                 full_row: true
                 hide_state: true
-
+                
+              - type: custom:gap-card
+             
+              - type: custom:gap-card
+            
+              - type: custom:gap-card
                 
       # Stue etage
       Stue:
@@ -172,11 +180,11 @@ cards:
                 entity: light.laese_lampe_hue
                 name: Læse lampe
                 
-              - type: entity-button
-              
-              - type: entity-button
-              
-              - type: entity-button
+              - type: custom:gap-card
+             
+              - type: custom:gap-card
+            
+              - type: custom:gap-card
                 
           - type: custom:stack-in-card
             style: |
@@ -189,6 +197,12 @@ cards:
                 entity: light.laese_lampe_hue
                 full_row: true
                 hide_state: true
+                
+              - type: custom:gap-card
+             
+              - type: custom:gap-card
+            
+              - type: custom:gap-card
                 
       # Kælder etage
       Kælder:
@@ -316,6 +330,12 @@ cards:
                 entity: light.udendors_lampe_hue
                 name: Udendørs lampe
                 
+              - type: custom:gap-card
+             
+              - type: custom:gap-card
+            
+              - type: custom:gap-card
+                
           - type: custom:stack-in-card
             style: |
               ha-card {
@@ -327,3 +347,9 @@ cards:
                 entity: light.udendors_lampe_hue
                 full_row: true
                 hide_state: true
+                
+              - type: custom:gap-card
+             
+              - type: custom:gap-card
+            
+              - type: custom:gap-card
