@@ -4,18 +4,8 @@ entities:
 - entity: sensor.netatmo_svendebjergvejr_temperature
   name: Temperatur (Stue)
   
-     
-- entity: sensor.temperature
-  name: Temperatur (Arduino)
-
-# - entity: sensor.netatmo_svendebjergvejr_co2
-#   name: CO2 i Stuen
-
 - entity: sensor.netatmo_svendebjergvejr_victors_vaerelse_temperature
   name: Temperatur (Victor)
-
-# - entity: sensor.netatmo_svendebjergvejr_victors_vaerelse_co2
-#   name: CO2 på Victor's værelse
 
 - type: custom:mini-graph-card
   name: CO2

@@ -54,4 +54,8 @@
                 
 - url: /local/community/atomic-calendar-revive/atomic-calendar-revive.js
   type: module
+  
+- url: /local/community/lovelace-card-mod/card-mod.js
+  type: module
+                
                 

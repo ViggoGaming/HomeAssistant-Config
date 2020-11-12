@@ -1,0 +1,5 @@
+- platform: nordpool
+  VAT: False
+  region: "DK2"
+  precision: 5
+  price_type: MWh

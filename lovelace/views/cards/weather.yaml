@@ -2,6 +2,6 @@ type: custom:weather-card
 entity: weather.hjem_meteorologisk
 current: true
 details: true
-forecast: false
+forecast: true
 hourly_forecast: false
-number_of_forecasts: 3
+number_of_forecasts: 4

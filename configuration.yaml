@@ -37,6 +37,20 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 sensor: !include_dir_merge_list lovelace/sensors
+      
+notify:
+  - name: all_devices
+    platform: group
+    services:
+      - service: mobile_app_jacob_buch_hansen
+      - service: mobile_app_pernille_therkildsens_iphone
+      - service: mobile_app_in2023
+      
+  - name: parents
+    platform: group
+    services:
+      - service: mobile_app_jacob_buch_hansen
+      - service: mobile_app_pernille_therkildsens_iphone
 
 discovery:
 

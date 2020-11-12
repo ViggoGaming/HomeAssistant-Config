@@ -12,10 +12,24 @@ cards:
         critical: 15
         warning: 65
         charging: true
+        
+      - type: custom:battery-entity-row
+        entity: sensor.jacob_buch_hansen_battery_level
+        name: Jacob's iPhone 7
+        critical: 15
+        warning: 65
+        charging: true
+        
+      - type: custom:battery-entity-row
+        entity: sensor.pernille_therkildsens_iphone_battery_level
+        name: Pernille's iPhone 8
+        critical: 15
+        warning: 65
+        charging: true
 
       - type: custom:battery-entity-row
         entity: sensor.in2023_battery_level
-        name: OnePlus 8 Pro
+        name: Victor's OnePlus 8 Pro
         critical: 15
         warning: 65
         charging: true

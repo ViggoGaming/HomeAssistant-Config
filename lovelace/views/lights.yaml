@@ -37,6 +37,12 @@ cards:
             name: Victor
             toggle: true
             type: 'custom:slider-entity-row'
+            
+          - entity: light.nat_lampe_victor_hue
+            hide_when_off: true
+            name: Victor nat lampe
+            toggle: true
+            type: 'custom:slider-entity-row'
 
       - type: entities
         title: Stue
@@ -64,6 +70,12 @@ cards:
           - entity:  light.kokkenvenstre_traadfri
             hide_when_off: true
             name: Køkken venstre
+            toggle: true
+            type: 'custom:slider-entity-row'
+            
+          - entity:  light.laese_lampe_hue
+            hide_when_off: true
+            name: Læse lampe
             toggle: true
             type: 'custom:slider-entity-row'
 

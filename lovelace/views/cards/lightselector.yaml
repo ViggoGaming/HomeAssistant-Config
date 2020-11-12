@@ -13,8 +13,16 @@ cards:
       # Første sal
       Første sal:
         type: custom:stack-in-card
+        style: |
+          ha-card {
+            box-shadow: none;
+          }
         cards:
           - type: custom:stack-in-card
+            style: |
+              ha-card {
+                box-shadow: none;
+              }
             mode: horizontal
             cards:
               - type: entity-button
@@ -35,6 +43,10 @@ cards:
                 
           - type: custom:stack-in-card
             mode: horizontal
+            style: |
+              ha-card {
+                box-shadow: none;
+              }
             cards:
               - type: custom:slider-entity-row
                 entity: light.trappe_hue
@@ -56,11 +68,54 @@ cards:
                 full_row: true
                 hide_state: true
                 
+              - type: custom:slider-entity-row
+                entity: light.nat_lampe_victor_hue
+                full_row: true
+                hide_state: true
+                
+          - type: custom:stack-in-card
+            style: |
+              ha-card {
+                box-shadow: none;
+              }
+            mode: horizontal
+            cards:
+              - type: entity-button
+                entity: light.nat_lampe_victor_hue
+                name: Victor nat lys
+                
+              - type: entity-button
+              
+              - type: entity-button
+              
+              - type: entity-button
+              
+          - type: custom:stack-in-card
+            mode: horizontal
+            style: |
+              ha-card {
+                box-shadow: none;
+              }
+            cards:
+              - type: custom:slider-entity-row
+                entity: light.nat_lampe_victor_hue
+                full_row: true
+                hide_state: true
+
+                
       # Stue etage
       Stue:
         type: custom:stack-in-card
+        style: |
+          ha-card {
+            box-shadow: none;
+          }
         cards:
           - type: custom:stack-in-card
+            style: |
+              ha-card {
+                box-shadow: none;
+              }
             mode: horizontal
             cards:
               - type: entity-button
@@ -80,6 +135,10 @@ cards:
                 name: Køkken venstre
                 
           - type: custom:stack-in-card
+            style: |
+              ha-card {
+                box-shadow: none;
+              }
             mode: horizontal
             cards:
               - type: custom:slider-entity-row
@@ -102,11 +161,48 @@ cards:
                 full_row: true
                 hide_state: true
 
+          - type: custom:stack-in-card
+            style: |
+              ha-card {
+                box-shadow: none;
+              }
+            mode: horizontal
+            cards:
+              - type: entity-button
+                entity: light.laese_lampe_hue
+                name: Læse lampe
+                
+              - type: entity-button
+              
+              - type: entity-button
+              
+              - type: entity-button
+                
+          - type: custom:stack-in-card
+            style: |
+              ha-card {
+                box-shadow: none;
+              }
+            mode: horizontal
+            cards:
+              - type: custom:slider-entity-row
+                entity: light.laese_lampe_hue
+                full_row: true
+                hide_state: true
+                
       # Kælder etage
       Kælder:
         type: custom:stack-in-card
+        style: |
+          ha-card {
+            box-shadow: none;
+          }
         cards:
           - type: custom:stack-in-card
+            style: |
+              ha-card {
+                box-shadow: none;
+              }
             mode: horizontal
             cards:
               - type: entity-button
@@ -125,6 +221,10 @@ cards:
                 entity: light.vinkaelder_hue
                 name: Vinkælder
           - type: custom:stack-in-card
+            style: |
+              ha-card {
+                box-shadow: none;
+              }
             mode: horizontal
             cards:
               - type: custom:slider-entity-row
@@ -147,6 +247,10 @@ cards:
                 full_row: true
                 hide_state: true
           - type: custom:stack-in-card
+            style: |
+              ha-card {
+                box-shadow: none;
+              }
             mode: horizontal
             cards:
               - type: entity-button
@@ -167,6 +271,10 @@ cards:
 
 
           - type: custom:stack-in-card
+            style: |
+              ha-card {
+                box-shadow: none;
+              }
             mode: horizontal
             cards:
               - type: custom:slider-entity-row
@@ -192,8 +300,16 @@ cards:
       # Udendørs
       Udendørs:
         type: custom:stack-in-card
+        style: |
+          ha-card {
+            box-shadow: none;
+          }
         cards:
           - type: custom:stack-in-card
+            style: |
+              ha-card {
+                box-shadow: none;
+              }
             mode: horizontal
             cards:
               - type: entity-button
@@ -201,6 +317,10 @@ cards:
                 name: Udendørs lampe
                 
           - type: custom:stack-in-card
+            style: |
+              ha-card {
+                box-shadow: none;
+              }
             mode: horizontal
             cards:
               - type: custom:slider-entity-row

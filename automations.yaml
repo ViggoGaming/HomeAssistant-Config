@@ -1,1 +1,30 @@
-[]
+- id: '1604782615196'
+  alias: Tag 20095a7d-a7f3-4d4a-9e4d-0efe5596d7e6 is scanned
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: 20095a7d-a7f3-4d4a-9e4d-0efe5596d7e6
+  condition: []
+  action:
+  - type: turn_off
+    device_id: e871db9f10c111eb9a9d8bc5c456386a
+    entity_id: light.indhak_hue
+    domain: light
+  mode: single
+- id: '1604783356944'
+  alias: Tag 20095a7d-a7f3-4d4a-9e4d-0efe5596d7e6 is scanned
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: 20095a7d-a7f3-4d4a-9e4d-0efe5596d7e6
+  condition: []
+  action:
+  - type: toggle
+    device_id: e871ac6910c111ebbd58ef21eec86cac
+    entity_id: light.entre_hue
+    domain: light
+  - type: toggle
+    device_id: e871db9f10c111eb9a9d8bc5c456386a
+    entity_id: light.indhak_hue
+    domain: light
+  mode: single

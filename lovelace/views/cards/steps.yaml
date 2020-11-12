@@ -1,0 +1,11 @@
+type: entities
+title: Skridt🚶
+entities:
+  - entity: sensor.in2023_steps_sensor
+    name: Victor
+  
+  - entity: sensor.jacob_buch_hansen_steps
+    name: Jacob
+    
+  - entity: sensor.pernille_therkildsens_iphone_steps
+    name: Pernille

@@ -21,6 +21,7 @@ cards:
       state_image:
         "home": /local/images/persons/jacob_color.jpg
         "not_home": /local/images/persons/jacob_black_and_white.jpg
+        "Sukkertoppen": /local/images/persons/jacob_black_and_white.jpg
       entity: person.jacob_buch_hansen
         
     - type: picture-glance
@@ -32,4 +33,5 @@ cards:
       state_image:
         "home": /local/images/persons/pernille_color.jpg
         "not_home": /local/images/persons/pernille_black_and_white.jpg
+        "Sukkertoppen": /local/images/persons/pernille_black_and_white.jpg
       entity: person.pernille_therkildsen

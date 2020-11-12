@@ -12,9 +12,9 @@ cards:
       
       - !include cards/lightselector.yaml
 
-      - !include cards/garbage.yaml
-
       - !include cards/library.yaml
+
+      - !include cards/steps.yaml
       
       - break
     
@@ -29,6 +29,8 @@ cards:
         
         # Tredje kolonne
       - !include cards/calendar.yaml
+      
+      - !include cards/garbage.yaml
         
       - type: horizontal-stack
         cards:
